@@ -1,0 +1,31 @@
+body {
+  background: rgb(58,157,164);
+}
+#search {
+  margin: auto;
+}
+.smaller {
+  width: 10%;
+  height: 10%;
+}
+h2 {
+  color:white;
+}
+button {
+  border-radius: 50%;
+}
+.selected {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#results {
+  margin: 5% auto auto auto;
+  background: white;
+  width: 500px;
+}
+.selected {
+  border: 3px solid rgb(102, 255, 204);
+  border-radius: 5%;
+}
+
