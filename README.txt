@@ -1,1 +1,1 @@
-Test
+Simple Wikipedia article search app.
