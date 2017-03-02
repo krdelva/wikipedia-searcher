@@ -9,7 +9,6 @@ function change() {
     var searchStr = $('input[name=search]');
     $('input').on("keyup", function(keyPressed) {
       searchStr = $('input[name=search]').val();
-      // var data = $.getJSON("https://en.wikipedia.org/w/api.php?action=query&titles=" + searchStr.val() + "&prop=revisions&rvprop=content&format=json", function(json, status, test) {
 
       function titleCase(str) {
         str = str.toLowerCase().split(' '); 
@@ -60,9 +59,7 @@ function change() {
   });
 }
 
-var count = 1;
+
 $("#btn-search").on("click", function() {
-  console.log(count + " time");
-  count++;
   change();
 });
