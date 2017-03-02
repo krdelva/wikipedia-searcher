@@ -29,8 +29,9 @@ function change() {
 
 
       $.ajax({
-        dataType: 'json',
+        dataType: 'jsonp',
         type: 'GET',
+        headers: {'Access-Control-Allow-Origin' : '*'},
         url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" + searchStr,
         success: function(data, textStatus, jqXHR) {
 
@@ -42,11 +43,11 @@ function change() {
          
         },
         error: function(jqXHR, textStatus, errorThrown) {
-          console.log("Please correct the error!");
+          console.log(errorThrown);
         }
       });
 
-      $('.link').html.on('click', function() {
+      $('.link').on('click', function() {
         window.open('https://en.wikipedia.org/wiki/' + searchStr);
       });
       $('input').on("focusout", function() {
